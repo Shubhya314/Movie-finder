@@ -1,0 +1,1 @@
+const trending=document.getElementById("trending");
