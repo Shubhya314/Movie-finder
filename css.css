@@ -5,8 +5,10 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
+    width: 99vw;
     height: auto;
     background-color: #0F172A;
+   
 }
 img{
     height: 80px;
@@ -24,6 +26,7 @@ h2{
     /* justify-content:space-around; */
     align-items: center;
     color: white;
+     position: relative;
 }
 #input{
     height: 40px;
@@ -173,4 +176,13 @@ i{
 /* Thumb hover */
 .same2::-webkit-scrollbar-thumb:hover {
   background: #2563eb;
+}
+.results{
+  
+  width: 500px;
+  background-color:#3d4f74 ;
+   position: absolute;
+   z-index: 100;
+   color: white;
+   left: 200px;
 }

@@ -1,6 +1,47 @@
 const trending=document.getElementById("trending");
 const toprated=document.getElementById("top_rated");
 const popular_movies=document.getElementById("popular");
+
+const finding=document.getElementById("input");
+let timeout;
+finding.addEventListener(`input`,(e)=>{
+  
+  const oldresults=document.querySelector(".results");
+        if(oldresults){
+          oldresults.remove();
+        }
+  clearTimeout(timeout);
+ timeout =setTimeout(async()=>{
+       
+       const response=await fetch(`https://api.themoviedb.org/3/search/movie?api_key=23117eab660cf24e666475824cb91ff0&query=${finding.value}`)
+        if(!response.ok){
+            throw new Error("Something went wrong");
+        }
+        const data= await response.json();
+
+        const results=document.createElement("div");
+        results.classList.add("results");
+        
+        data.results.slice(0, 5).forEach(movie => {
+    if (!movie.original_title) return;
+
+    const item = document.createElement("div");
+    item.textContent = movie.original_title;
+    item.style.marginBottom = "20px";
+    item.style.paddingRight = "10px";
+
+    results.append(item);
+});
+        finding.after(results);
+  },500)
+      
+            
+    
+        
+
+})
+
+
 async function trends(){
     try{
        const response=await fetch("https://api.themoviedb.org/3/trending/movie/day?api_key=23117eab660cf24e666475824cb91ff0");
