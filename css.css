@@ -5,7 +5,7 @@
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 body{
-    width: 99vw;
+    width: auto;
     height: auto;
     background-color: #0F172A;
    
@@ -65,13 +65,13 @@ i{
     
 
     /* background-color: aqua; */
-    margin-left: 50px;
+    margin-left: 20px;
 }
 #top_rated{
     margin-bottom: 30px;
 }
  .s{
-    margin-left: 70px;
+    margin-left: 50px;
     margin-top: 50px;
     margin-bottom: 10px;
     

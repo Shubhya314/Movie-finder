@@ -125,7 +125,9 @@ movie_meta.textContent =
   const details_btn = document.createElement("button");
 details_btn.classList.add("details-btn");
 details_btn.textContent = "View Details";
-
+       details_btn.addEventListener(`click`,()=>{
+           window.location.href=`moviepage.html?id=${data.results[i].id}`
+       })
           movie_info.append(
   movie_title,
   movie_meta,
@@ -182,6 +184,10 @@ movie_meta.textContent =
 details_btn.classList.add("details-btn");
 details_btn.textContent = "View Details";
 
+details_btn.addEventListener(`click`,()=>{
+           window.location.href=`moviepage.html?id=${data.results[i].id}`
+       })
+
           movie_info.append(
   movie_title,
   movie_meta,
@@ -235,6 +241,10 @@ movie_meta.textContent =
   const details_btn = document.createElement("button");
 details_btn.classList.add("details-btn");
 details_btn.textContent = "View Details";
+
+details_btn.addEventListener(`click`,()=>{
+           window.location.href=`moviepage.html?id=${data.results[i].id}`
+       })
 
           movie_info.append(
   movie_title,
